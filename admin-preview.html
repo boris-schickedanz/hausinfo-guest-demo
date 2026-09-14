@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2d4a3e" />
+  <title>Hausinfo Admin — Vorschau (Demo)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-topbar">
+    <span class="logo">Hausinfo · Admin</span>
+    <span class="pill">Demo-Vorschau · nicht speicherbar</span>
+  </header>
+
+  <div class="admin-layout">
+    <div class="admin-card">
+      <h2>
+        Pension Alpenblick
+        <span class="mock-badge">Mock-UI</span>
+      </h2>
+      <p style="font-size:0.85rem;color:var(--muted);margin-bottom:1rem;">
+        So bearbeiten Hoteliers Inhalte in der echten Version — hier rein statisch für Ihre Sales-Demo.
+      </p>
+      <div class="admin-actions">
+        <a class="btn-admin" href="index.html">← Gästeansicht öffnen</a>
+        <a class="btn-admin secondary" href="qr.html">QR-Code</a>
+      </div>
+    </div>
+
+    <div class="admin-card">
+      <h2>
+        WLAN ändern
+        <span class="mock-badge">Highlight</span>
+      </h2>
+      <div class="field-group">
+        <label for="admin-ssid">Netzwerkname (SSID)</label>
+        <input id="admin-ssid" type="text" value="Alpenblick_Guest" readonly />
+      </div>
+      <div class="field-group">
+        <label for="admin-pass">Passwort</label>
+        <input id="admin-pass" type="text" value="Bergluft2026" readonly />
+      </div>
+      <p style="font-size:0.8rem;color:var(--muted);margin-bottom:0.75rem;">
+        Gäste sehen Änderungen sofort auf dem Handy — kein App-Update, kein Papierdruck.
+      </p>
+      <button type="button" class="btn-admin" id="fake-save-wifi">Speichern (Demo)</button>
+    </div>
+
+    <div class="admin-card">
+      <h2>Abschnitte ein-/ausblenden</h2>
+      <div class="section-toggle">
+        <span>📶 WLAN</span>
+        <div class="toggle-switch" aria-hidden="true"></div>
+      </div>
+      <div class="section-toggle">
+        <span>🔑 Ankunft &amp; Check-in</span>
+        <div class="toggle-switch" aria-hidden="true"></div>
+      </div>
+      <div class="section-toggle">
+        <span>🏠 Hausordnung</span>
+        <div class="toggle-switch" aria-hidden="true"></div>
+      </div>
+      <div class="section-toggle">
+        <span>🥾 Lokale Tipps</span>
+        <div class="toggle-switch" aria-hidden="true"></div>
+      </div>
+      <div class="section-toggle">
+        <span>📞 Kontakt &amp; Notruf</span>
+        <div class="toggle-switch" aria-hidden="true"></div>
+      </div>
+      <div class="section-toggle">
+        <span>✉️ E-Mail-Capture</span>
+        <div class="toggle-switch off" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="admin-card">
+      <h2>Begrüssungstext</h2>
+      <div class="field-group">
+        <label for="admin-welcome">Header / Tagline</label>
+        <textarea id="admin-welcome" readonly>Herzlich willkommen in unserem Berggasthof</textarea>
+      </div>
+      <div class="field-group">
+        <label for="admin-checkout">Check-out Hinweis</label>
+        <input id="admin-checkout" type="text" value="bis 10:30 — Frühstück bis 09:30" readonly />
+      </div>
+      <button type="button" class="btn-admin secondary" id="fake-save-copy">Texte speichern (Demo)</button>
+    </div>
+
+    <div class="admin-card">
+      <h2>QR &amp; Teilen</h2>
+      <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.85rem;">
+        Drucken Sie den QR für den Empfangstresen oder die Zimmertür. In Produktion zeigt er auf Ihre Live-URL.
+      </p>
+      <div class="admin-actions">
+        <a class="btn-admin" href="qr.html">Grossen QR öffnen</a>
+        <button type="button" class="btn-admin secondary" id="fake-copy-link">Gäste-Link kopieren</button>
+      </div>
+    </div>
+
+    <p class="admin-note">
+      Dies ist eine <strong>statische Verkaufsvorschau</strong> ohne Backend, Login oder Speicherung.
+      Produktiv: Inhalte live editieren, Mehrsprachigkeit, Analytics — ohne App-Store.
+    </p>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      function toast(msg) {
+        var t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        setTimeout(function () { t.classList.remove("show"); }, 2200);
+      }
+      var w = document.getElementById("fake-save-wifi");
+      var c = document.getElementById("fake-save-copy");
+      var l = document.getElementById("fake-copy-link");
+      if (w) w.addEventListener("click", function () { toast("Gespeichert (Demo — keine Änderung)"); });
+      if (c) c.addEventListener("click", function () { toast("Gespeichert (Demo — keine Änderung)"); });
+      if (l) l.addEventListener("click", function () {
+        var url = new URL("index.html", window.location.href).href;
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(function () { toast("Link kopiert"); });
+        } else {
+          toast(url);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

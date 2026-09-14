@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2d4a3e" />
+  <title>QR-Code — Pension Alpenblick Gästemappe</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="qr-page">
+    <p class="property-badge" style="margin-bottom:1rem;background:var(--cream-dark);color:var(--forest);">Digitale Gästemappe</p>
+    <h1>Pension Alpenblick</h1>
+    <p class="subtitle">Scannen Sie den Code — alle Infos auf Ihrem Handy</p>
+
+    <div class="qr-frame">
+      <div id="qr-large" aria-label="QR-Code zur Gästemappe"></div>
+    </div>
+
+    <p class="qr-caption">
+      WLAN, Check-in, Hausordnung &amp; Tipps — ohne App.<br />
+      <strong>Für Screenshots &amp; Kaltakquise:</strong> diesen QR gross abspeichern.<br /><br />
+      Ziel-URL (Demo): <code id="qr-url-label">index.html (relativ)</code>
+    </p>
+
+    <p class="qr-print-hint no-print">
+      <a href="index.html">← Zurück zur Gästemappe</a>
+      · Zum Drucken: Cmd/Ctrl+P ·
+      In Produktion die Live-URL in <code>app.js</code> setzen (siehe README).
+    </p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+    (function () {
+      var label = document.getElementById("qr-url-label");
+      if (label && window.HausinfoDemo) {
+        label.textContent = window.HausinfoDemo.DEMO_URL;
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2d4a3e" />
+  <meta name="description" content="Digitale Gästemappe — Pension Alpenblick, Grindelwald. WLAN, Ankunft, Hausinfos & Tipps für Ihren Aufenthalt." />
+  <title>Pension Alpenblick — Digitale Gästemappe</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="badge-row">
+        <span class="property-badge">✦ Digitale Gästemappe</span>
+        <span class="updated" id="updated-today">Aktualisiert heute</span>
+      </div>
+      <h1>Pension Alpenblick</h1>
+      <p class="tagline">Herzlich willkommen in unserem Berggasthof</p>
+      <div class="header-meta">
+        <span>📍 Grindelwald, Berner Oberland</span>
+        <span>🏔️ Seit 1968</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="chips-wrap" aria-label="Abschnitte">
+    <div class="chips">
+      <a class="chip active" href="#wifi">WiFi</a>
+      <a class="chip" href="#ankunft">Ankunft</a>
+      <a class="chip" href="#haus">Haus</a>
+      <a class="chip" href="#tipps">Tipps</a>
+      <a class="chip" href="#kontakt">Kontakt</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- WiFi -->
+    <section id="wifi" aria-labelledby="wifi-heading">
+      <h2 class="section-title" id="wifi-heading">WLAN für Gäste</h2>
+      <div class="card wifi-card">
+        <div class="card-title"><span class="icon">📶</span> Kostenloses WLAN</div>
+        <div class="wifi-row">
+          <div class="wifi-field">
+            <div class="wifi-label">Netzwerkname (SSID)</div>
+            <div class="wifi-value" id="wifi-ssid">Alpenblick_Guest</div>
+          </div>
+          <div class="wifi-field">
+            <div class="wifi-label">Passwort</div>
+            <div class="wifi-value" id="wifi-pass">Bergluft2026</div>
+          </div>
+        </div>
+        <button type="button" class="btn-copy" id="copy-wifi" aria-label="WLAN-Daten kopieren">
+          📋 SSID &amp; Passwort kopieren
+        </button>
+        <p class="wifi-hint">Ein Tippen — und Sie sind online. Gültig im ganzen Haus und auf der Terrasse.</p>
+      </div>
+    </section>
+
+    <!-- Ankunft -->
+    <section id="ankunft" aria-labelledby="ankunft-heading">
+      <h2 class="section-title" id="ankunft-heading">Ankunft &amp; Aufenthalt</h2>
+      <div class="info-grid">
+        <div class="info-tile">
+          <div class="label">Check-in</div>
+          <div class="value">ab 15:00</div>
+          <div class="sub">Schlüssel an der Rezeption</div>
+        </div>
+        <div class="info-tile">
+          <div class="label">Check-out</div>
+          <div class="value">bis 10:30</div>
+          <div class="sub">Frühstück bis 09:30</div>
+        </div>
+        <div class="info-tile">
+          <div class="label">Frühstück</div>
+          <div class="value">07:30–09:30</div>
+          <div class="sub">Speisesaal, EG</div>
+        </div>
+        <div class="info-tile">
+          <div class="label">Parken</div>
+          <div class="value">Kostenlos</div>
+          <div class="sub">Hinter dem Haus</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 0.85rem;">
+        <div class="card-title"><span class="icon">🔑</span> Späte Anreise</div>
+        <p>Bei Ankunft nach 20:00 Uhr finden Sie den Zimmerschlüssel im Schlüsselkasten neben dem Eingang. Code: <strong>4821</strong> (auch in Ihrer Buchungsbestätigung).</p>
+        <p>Bitte melden Sie sich am nächsten Morgen kurz an der Rezeption.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🥐</span> Frühstück</div>
+        <p>Regionales Buffet mit Brot vom Dorfbäcker, hausgemachter Marmelade, Käse vom Bauernhof und frischem Kaffee. Bitte teilen Sie uns Allergien oder Unverträglichkeiten bei der Ankunft mit.</p>
+      </div>
+    </section>
+
+    <!-- Haus -->
+    <section id="haus" aria-labelledby="haus-heading">
+      <h2 class="section-title" id="haus-heading">Im Haus</h2>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏠</span> Hausordnung — die wichtigsten Punkte</div>
+        <ul>
+          <li><strong>Ruhezeiten:</strong> 22:00–07:00 Uhr. Bitte Türen leise schliessen.</li>
+          <li><strong>Rauchen:</strong> Nur auf der Terrasse. Rauchmelder in allen Zimmern.</li>
+          <li><strong>Haustiere:</strong> Nach Absprache willkommen (CHF&nbsp;15/Nacht).</li>
+          <li><strong>Küche / Stube:</strong> Gäste dürfen die Teeküche im 1.&nbsp;OG nutzen (Tee, Wasserkocher).</li>
+          <li><strong>Müll:</strong> Bitte trennen — Behälter im Hof (Papier, PET, Rest).</li>
+          <li><strong>Handtücher:</strong> Auf den Boden legen = Wechsel gewünscht.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🧺</span> Praktisches</div>
+        <ul>
+          <li>Waschmaschine &amp; Trockner: Keller, Münze CHF&nbsp;3 (Wechselgeld an der Rezeption)</li>
+          <li>Ski-/Wanderraum: EG links, Schliessfächer gratis</li>
+          <li>Ladestation E-Bike: hinter der Garage, bitte anmelden</li>
+          <li>Gepäckaufbewahrung nach Check-out: gern möglich</li>
+        </ul>
+      </div>
+
+      <div class="emergency">
+        <strong>🚨 Notfall</strong>
+        <p>
+          Europäischer Notruf: <a href="tel:112">112</a> · Polizei: <a href="tel:117">117</a> · Feuerwehr: <a href="tel:118">118</a> · Sanität: <a href="tel:144">144</a><br />
+          Hausnotruf / Gastgeber: <a href="tel:+41338551234">+41 33 855 12 34</a> (auch nachts)
+        </p>
+      </div>
+    </section>
+
+    <!-- Tipps -->
+    <section id="tipps" aria-labelledby="tipps-heading">
+      <h2 class="section-title" id="tipps-heading">Tipps vor Ort</h2>
+      <div class="tips-list">
+        <article class="tip">
+          <div class="tip-emoji">🥾</div>
+          <div>
+            <h3>Wandern: First → Bachalpsee</h3>
+            <p>Klassiker mit Panorama auf Eiger &amp; Wetterhorn. Gondel ab Grindelwald, ca.&nbsp;1,5&nbsp;Std. hin und zurück. Gute Schuhe!</p>
+          </div>
+        </article>
+        <article class="tip">
+          <div class="tip-emoji">🚌</div>
+          <div>
+            <h3>Bus &amp; Bahn</h3>
+            <p>Haltestelle «Dorf» 4&nbsp;Min. zu Fuss. Jungfrau Travel Pass an der Rezeption erhältlich. Fahrplan: SBB Mobile / postauto.ch</p>
+          </div>
+        </article>
+        <article class="tip">
+          <div class="tip-emoji">🍽️</div>
+          <div>
+            <h3>Restaurant Hirschen</h3>
+            <p>Traditionelle Küche, 8&nbsp;Min. Fussweg. Fondue &amp; Rösti empfehlenswert. Reservierung abends ratsam: +41&nbsp;33&nbsp;853&nbsp;12&nbsp;77</p>
+          </div>
+        </article>
+        <article class="tip">
+          <div class="tip-emoji">🛒</div>
+          <div>
+            <h3>Einkaufen</h3>
+            <p>Coop und Migros im Dorfzentrum (10&nbsp;Min.). Sonntags geöffnet bis 17:00. Frisches Brot: Bäckerei Michel, Dorfstrasse&nbsp;12.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <div class="tip-emoji">🚠</div>
+          <div>
+            <h3>Eiger Express</h3>
+            <p>Schnellste Verbindung zur Jungfraujoch-Region. Station Grindelwald Terminal — Bus Linie&nbsp;121 oder 12&nbsp;Min. zu Fuss.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <div class="tip-emoji">☕</div>
+          <div>
+            <h3>Café Central</h3>
+            <p>Gemütliche Pause mit Hauskuchen und Aussicht. Ideal nach der Wanderung. Öffnungszeiten: 09:00–18:00.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <div class="tip-emoji">❄️</div>
+          <div>
+            <h3>Im Winter</h3>
+            <p>Skipass &amp; Ausrüstung: Sportzentrum Dorf. Skibus hält direkt vor dem Haus (Haltestelle «Alpenblick»). Skipiste «First» 5&nbsp;Min.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <div class="tip-emoji">🌅</div>
+          <div>
+            <h3>Sonnenaufgang Pfingstegg</h3>
+            <p>Kurze Seilbahnfahrt, spektakuläres Licht auf die Nordwand. Frühstückskorb auf Anfrage an der Rezeption (Vortag bestellen).</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" aria-labelledby="kontakt-heading">
+      <h2 class="section-title" id="kontakt-heading">Kontakt</h2>
+      <div class="action-row">
+        <a class="action-btn call" href="tel:+41338551234">
+          <span class="ab-icon">📞</span>
+          Anrufen
+        </a>
+        <a class="action-btn maps"
+           href="https://www.google.com/maps/search/?api=1&amp;query=Pension+Alpenblick+Grindelwald"
+           target="_blank" rel="noopener noreferrer">
+          <span class="ab-icon">🗺️</span>
+          Maps öffnen
+        </a>
+      </div>
+      <div class="contact-details">
+        <strong>Familie Brunner</strong><br />
+        Alpenstrasse 14 · 3818 Grindelwald<br />
+        <a href="mailto:info@pension-alpenblick.example">info@pension-alpenblick.example</a><br />
+        Rezeption: 08:00–12:00 &amp; 15:00–20:00
+      </div>
+    </section>
+  </main>
+
+  <!-- Hotelier sales banner + QR -->
+  <aside class="hotelier-banner" aria-label="Demo-Hinweis für Hoteliers">
+    <div class="hotelier-inner">
+      <div class="hotelier-qr" id="qr-banner" title="QR zur Gästemappe"></div>
+      <div class="hotelier-text">
+        <h3>Demo für Hoteliers</h3>
+        <p>
+          So sieht Ihre digitale Gästemappe auf dem Handy aus.
+          QR zeigt auf diese Demo-Seite — in Produktion ersetzen Sie die URL.
+          <a href="admin-preview.html">Admin-Vorschau</a> ·
+          <a href="qr.html">Grosser QR</a>
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <p>© Pension Alpenblick · Demo von Hausinfo · <a href="qr.html">QR drucken</a></p>
+  </footer>
+
+  <!-- Email capture strip -->
+  <div class="email-strip" role="complementary" aria-label="Newsletter">
+    <div class="email-strip-inner">
+      <h3>Tipps &amp; Angebote per E-Mail?</h3>
+      <form class="email-form" id="email-form" novalidate>
+        <div class="email-row">
+          <input type="email" id="guest-email" name="email" placeholder="Ihre E-Mail" required autocomplete="email" inputmode="email" />
+          <button type="submit" class="btn-submit" id="email-submit" disabled>Senden</button>
+        </div>
+        <label class="gdpr">
+          <input type="checkbox" id="gdpr-check" name="gdpr" />
+          <span>Ich willige ein, dass meine E-Mail zur Zusendung von Tipps genutzt wird. Widerruf jederzeit möglich. (Demo — keine Speicherung)</span>
+        </label>
+      </form>
+      <div class="thank-you hidden" id="thank-you" role="status">
+        Danke! Wir melden uns — in der echten Version landet Ihre Adresse sicher bei uns.
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- QRCode.js from CDN; app.js falls back to QR API if CDN blocked -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
